@@ -1,0 +1,189 @@
+$static-green: rgb(0, 179, 0);
+$static-blue: rgb(97, 97, 204);
+$static-red: rgb(211, 91, 91);
+
+.choice_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.choice_container_active {
+  z-index: 9;
+  background-color: rgba(150, 150, 150, 0.5);
+}
+.choice_ticket_title {
+  z-index: 20;
+
+  width: 90%;
+  height: 170px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -180px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  transition: bottom 1s;
+
+  .choice_row1 {
+    margin-top: 20px;
+    grid-gap: 20px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    .choice_item1 {
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+    }
+  }
+  .choice_row2 {
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    .choice_item2 {
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+.choice_ticket_title_active {
+  bottom: 0;
+}
+.icon_ticket_place {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 10px;
+}
+.title_ticket_place {
+  text-align: center;
+  margin: 0 auto;
+  width: 70px;
+  height: 20px;
+  font-size: 11px;
+  line-height: 22px;
+  font-family: "MmdBold";
+}
+///
+
+.container {
+  width: 100%;
+  height: 500px;
+  .record_title {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 17px;
+    font-family: "MmdBold";
+  }
+  .record_ticket_form {
+    width: 100%;
+    height: 500px;
+    .ticket_form {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      select {
+        cursor: pointer;
+        margin: 20px auto;
+        direction: rtl;
+        width: 90%;
+        height: 35px;
+        border-width: inherit;
+        background-color: rgba(145, 145, 145, 0.4);
+        font-family: "MmdReg";
+        color: rgb(87, 87, 87);
+        border-radius: 6px;
+      }
+      .ticket_title_input {
+        cursor: pointer;
+        margin: 0 auto;
+        direction: rtl;
+        width: 90%;
+        height: 35px;
+        border-width: inherit;
+        background-color: rgba(145, 145, 145, 0.4);
+        font-family: "MmdReg";
+        color: rgb(87, 87, 87);
+        border-radius: 6px;
+        &:focus,
+        &:hover {
+          font-family: "MmdBold";
+          color: rgb(54, 54, 54);
+        }
+      }
+      textarea {
+        direction: rtl;
+        cursor: pointer;
+        margin: 20px auto;
+        width: 90%;
+        height: 150px;
+        border-width: inherit;
+        background-color: rgba(145, 145, 145, 0.4);
+        font-family: "MmdReg";
+        padding-top: 10px;
+        color: rgb(87, 87, 87);
+        border-radius: 6px;
+        resize: none;
+        &:focus,
+        &:hover {
+          color: rgb(54, 54, 54);
+        }
+      }
+      label {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .send_file {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 60px;
+        border: 2px dashed gray;
+        border-radius: 8px;
+        padding-top: 10px;
+        padding-right: 10px;
+        direction: rtl;
+      }
+      span {
+        top: 15px;
+        right: 45px;
+        position: absolute;
+        font-size: 14px;
+        color: gray;
+      }
+      .attached_file_name {
+        left: 0;
+        top: 20px;
+        text-align: center;
+      }
+      button {
+        cursor: pointer;
+        margin: 40px auto;
+        direction: rtl;
+        width: 90%;
+        height: 40px;
+        border-width: inherit;
+        background-color: $static-blue;
+        font-family: "MmdReg";
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        border-radius: 6px;
+        &:hover,
+        &:focus {
+          border: 1px solid white;
+          background-color: $static-green;
+        }
+      }
+    }
+  }
+}

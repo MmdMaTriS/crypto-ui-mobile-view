@@ -21,6 +21,7 @@ import AskIcon from "../../styles/icons/Subtract-1.png";
 import TicketIcon from "../../styles/icons/Subtract.png";
 import SettingIcon from "../../styles/icons/Setting_fill.png";
 import TradingIcon from "../../styles/icons/trending_up.png";
+import { Link } from "react-router-dom";
 //Icons
 
 SwiperCore.use([Pagination, Autoplay]);
@@ -64,12 +65,14 @@ export default function Home() {
           </div>
           <div className={styles.item_title}>سوالات متداول</div>
         </div>
-        <div className={styles.top_menu_item}>
-          <div className={styles.item_icon}>
-            <img src={TicketIcon} alt="Ticket" width="30px" height="25px" />
+        <Link to="/tickets">
+          <div className={styles.top_menu_item}>
+            <div className={styles.item_icon}>
+              <img src={TicketIcon} alt="Ticket" width="30px" height="25px" />
+            </div>
+            <div className={styles.item_title}>تیکت</div>
           </div>
-          <div className={styles.item_title}>تیکت</div>
-        </div>
+        </Link>
         <div className={styles.top_menu_item}>
           <div className={styles.item_icon} style={{ paddingTop: "0" }}>
             <img src={SettingIcon} alt="Setting" width="35px" height="35px" />

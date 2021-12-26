@@ -18,11 +18,17 @@ $static-red: rgb(211, 91, 91);
   height: 55px;
   // background-color: red;
   margin-top: 20px;
+
   .item_icon {
     width: 30px;
     height: 30px;
     // background-color: yellow;
     margin: 0px auto;
+    &:hover,
+    &:focus {
+      transition: transform 0.5s;
+      transform: scale(1.2);
+    }
   }
   .item_title_change {
     text-align: center;

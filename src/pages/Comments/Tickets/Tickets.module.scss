@@ -1,0 +1,78 @@
+$static-green: rgb(0, 179, 0);
+$static-blue: rgb(97, 97, 204);
+$static-red: rgb(211, 91, 91);
+.container {
+  width: 100%;
+  padding-bottom: 110px;
+  //   background-color: red;
+  .title_tickets_section {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 18px;
+    font-family: "MmdReg";
+  }
+  .noMessage_section {
+    width: 150px;
+    height: 150px;
+    margin: 110px auto;
+    .noMessage_img {
+      //   background-color: orange;
+      margin: 0 auto;
+      width: 120px;
+      height: 120px;
+      display: grid;
+      grid-template-columns: auto auto;
+      .noMessage_img1 {
+        position: relative;
+        width: 60px;
+        height: 120px;
+        img {
+          position: absolute;
+          left: 10px;
+          bottom: 10px;
+          z-index: 1;
+        }
+      }
+      .noMessage_img2 {
+        position: relative;
+        width: 60px;
+        height: 120px;
+        img {
+          position: absolute;
+          right: 0px;
+          bottom: 30px;
+        }
+      }
+    }
+    .noMessage_title {
+      text-align: center;
+      margin: 0 auto;
+      width: 150px;
+      height: 20px;
+      font-size: 14px;
+      font-family: "MmdReg";
+    }
+  }
+  .place_button {
+    padding-top: 20px;
+    text-align: center;
+    .recordTicket_button {
+      font-family: "MmdReg";
+      line-height: 44px;
+      width: 140px;
+      height: 45px;
+      background-color: $static-blue;
+      color: white;
+      border-radius: 5px;
+      border-color: inherit;
+      border-width: 0;
+      &:hover,
+      &:focus {
+        background-color: $static-green;
+        border: 1px solid white;
+      }
+    }
+  }
+}
