@@ -1,0 +1,70 @@
+$static-green: rgb(0, 179, 0);
+$static-blue: rgb(97, 97, 204);
+$static-red: rgb(211, 91, 91);
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: rgb(230, 230, 230);
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: MmdReg;
+  src: url("./fonts/MmdReg.ttf");
+}
+@font-face {
+  font-family: MmdBold;
+  src: url("./fonts/MmdBold.ttf");
+}
+
+a {
+  color: unset !important;
+  text-decoration: none;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  margin-top: -10px;
+  display: block;
+  width: 320px;
+  height: 190px;
+  // background-color: red;
+  object-fit: contain;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -3px;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border: 1px solid green;
+}
+.swiper-pagination-bullet-active {
+  background-color: $static-green;
+  border: none;
+}
