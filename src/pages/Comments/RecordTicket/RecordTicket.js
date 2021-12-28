@@ -135,7 +135,11 @@ export default function RecordTicket() {
             <input
               type="file"
               id="attach_file"
-              style={{ display: "none" }}
+              style={{
+                display: "none",
+                WebkitUserSelect: "none",
+                WebkitTouchCallout: "none",
+              }}
               onChange={(e) => setTicketFile(e.target.files[0])}
             />
             <button type="submit">ارسال تیکت</button>
